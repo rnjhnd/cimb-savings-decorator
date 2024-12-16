@@ -14,7 +14,8 @@ public class CIMB {
 		System.out.println("New balance: " + account.computeBalanceWithInterest());
 		System.out.println("Benefits: " + account.showBenefits());
 		
-		System.out.println("------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		
 		GSave gSave = new GSave(account);
 		System.out.println(gSave.showInfo());
@@ -23,7 +24,7 @@ public class CIMB {
 		System.out.println("New balance: " + gSave.computeBalanceWithInterest());
 		System.out.println("Benefits: " + gSave.showBenefits());
 		
-		System.out.println("------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		
 		UpSave upSave = new UpSave(account);
 		System.out.println(upSave.showInfo());
