@@ -57,6 +57,7 @@ public class Cimb {
 
 You should display the following output:
 
+```
 Account number: 1234
 Account name: Juan Dela Cruz
 Balance: 10000.0
@@ -80,6 +81,7 @@ Account type: UpSave
 Interest rate: 0.04
 New balance: 10400.0
 Benefits: Standard Savings Account, With Insurance
+```
 
 Description of the following methods
 
@@ -98,6 +100,6 @@ Follow instructions.  You are not allowed to insert other methods except what is
 
 
 In your solution you must provide the following in your Github link account:
-  1. Problem statement (description of the problem. Just copy what is stated here).
-  2. UML Class Diagram
-  3. Uploaded java codes for the solution.
+   * Problem statement (description of the problem. Just copy what is stated here).
+   * UML Class Diagram
+   * Uploaded java codes for the solution.
