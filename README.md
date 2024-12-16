@@ -1,6 +1,6 @@
-# CIMB with Decorator-Pattern
+# CIMB with Decorator Pattern
 
-CIMB is a digital bank that offers GSave and UpSave savings accounts.   As with a typical Savings Account, it contains accountNumber, accountName, and a balance for that account.
+CIMB is a digital bank that offers GSave and UpSave savings accounts. As with a typical Savings Account, it contains accountNumber, accountName, and a balance for that account.
 
 The typical savings account offers an interest rate of 1%.
 The benefits of the typical savings account is the same with the "Standard Savings Account" as compared to other banks.
@@ -35,7 +35,7 @@ public class Cimb {
 		System.out.println("New balance: " + account.computeBalanceWithInterest());
 		System.out.println("Benefits: " + account.showBenefits());
 		
-		System.out.println("----------------------");
+		System.out.println("------------------------------------------------------------------");
 		
 		GSave gSave = new GSave(account);
 		System.out.println(gSave.showInfo());
@@ -44,7 +44,7 @@ public class Cimb {
 		System.out.println("New balance: " + gSave.computeBalanceWithInterest());
 		System.out.println("Benefits: " + gSave.showBenefits());
 		
-		System.out.println("----------------------");
+		System.out.println("------------------------------------------------------------------");
 		
 		UpSave upSave = new UpSave(account);
 		System.out.println(upSave.showInfo());
@@ -101,6 +101,7 @@ Follow instructions. You are not allowed to insert other methods except what is 
 
 
 In your solution you must provide the following in your Github link account:
+
    * Problem statement (Description of the problem. Just copy what is stated here).
    * UML Class Diagram
    * Uploaded java codes for the solution.
