@@ -1,4 +1,5 @@
 package DecoratorPattern;
+
 public class SavingsAccount implements BankAccount {
     private int accountNumber;
     private String accountName;

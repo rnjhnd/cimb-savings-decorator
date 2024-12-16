@@ -1,4 +1,5 @@
 package DecoratorPattern;
+
 public class GSave implements BankAccountDecorator {
     private BankAccount bankAccount;
 
