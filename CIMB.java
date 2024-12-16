@@ -1,5 +1,4 @@
 public class CIMB {
-
 	public static void main(String[] args) {
 		
 		SavingsAccount account = new SavingsAccount();
