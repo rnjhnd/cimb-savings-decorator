@@ -20,7 +20,7 @@ Develop a decorator pattern approach that will implement the given UML diagram:
 The content of your Cimb.java should ONLY contain the following codes with the exception of inserting your own package name :
 
 ```
-public class Cimb {
+public class CIMB {
 	public static void main(String[] args) {
 		
 		SavingsAccount account = new SavingsAccount();
@@ -35,7 +35,7 @@ public class Cimb {
 		System.out.println("New balance: " + account.computeBalanceWithInterest());
 		System.out.println("Benefits: " + account.showBenefits());
 		
-		System.out.println("------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		
 		GSave gSave = new GSave(account);
 		System.out.println(gSave.showInfo());
@@ -44,7 +44,7 @@ public class Cimb {
 		System.out.println("New balance: " + gSave.computeBalanceWithInterest());
 		System.out.println("Benefits: " + gSave.showBenefits());
 		
-		System.out.println("------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		
 		UpSave upSave = new UpSave(account);
 		System.out.println(upSave.showInfo());
@@ -66,7 +66,7 @@ Account type: Savings Account
 Interest rate: 0.01
 New balance: 10100.0
 Benefits: Standard Savings Account
-------------------------------------------------------------------
+-------------------------------------------------------------
 Account number: 1234
 Account name: Juan Dela Cruz
 Balance: 10000.0
@@ -74,7 +74,7 @@ Account type: GSave
 Interest rate: 0.025
 New balance: 10250.0
 Benefits: Standard Savings Account, GCash Transfer
-------------------------------------------------------------------
+-------------------------------------------------------------
 Account number: 1234
 Account name: Juan Dela Cruz
 Balance: 10000.0
