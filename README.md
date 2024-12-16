@@ -13,11 +13,12 @@ Benefits include the "Standard Savings Account" plus "with Insurance".
 
 
 Develop a decorator pattern approach that will implement the given UML diagram:
+![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
 
 
 The content of your Cimb.java should ONLY contain the following codes with the exception of inserting your own package name :
 
-```plaintext
+```
 public class Cimb {
 
 	public static void main(String[] args) {
@@ -65,7 +66,7 @@ Account type: Savings Account
 Interest rate: 0.01
 New balance: 10100.0
 Benefits: Standard Savings Account
-----------------------
+------------------------------------------------------------------
 Account number: 1234
 Account name: Juan Dela Cruz
 Balance: 10000.0
@@ -73,7 +74,7 @@ Account type: GSave
 Interest rate: 0.025
 New balance: 10250.0
 Benefits: Standard Savings Account, GCash Transfer
-----------------------
+------------------------------------------------------------------
 Account number: 1234
 Account name: Juan Dela Cruz
 Balance: 10000.0
