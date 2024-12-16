@@ -17,7 +17,7 @@ Develop a decorator pattern approach that will implement the given UML diagram:
 ![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
 
 
-The content of your Cimb.java should ONLY contain the following codes with the exception of inserting your own package name :
+The content of your CIMB.java should ONLY contain the following codes with the exception of inserting your own package name :
 
 ```
 public class CIMB {
