@@ -101,6 +101,9 @@ Follow instructions. You are not allowed to insert other methods except what is 
 
 
 In your solution you must provide the following in your Github link account:
+  1. Problem statement (description of the problem. Just copy what is stated here).
+  2. UML Class Diagram
+  3. Uploaded java codes for the solution.
 
    * Problem statement (Description of the problem. Just copy what is stated here).
    * UML Class Diagram
