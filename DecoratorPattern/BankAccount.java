@@ -1,3 +1,4 @@
+package DecoratorPattern;
 public interface BankAccount {
     String showAccountType();
     double getInterestRate();
