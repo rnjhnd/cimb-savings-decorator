@@ -13,6 +13,7 @@ Benefits include the "Standard Savings Account" plus "with Insurance".
 
 
 Develop a decorator pattern approach that will implement the given UML diagram:
+
 ![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
 
 
@@ -20,7 +21,6 @@ The content of your Cimb.java should ONLY contain the following codes with the e
 
 ```
 public class Cimb {
-
 	public static void main(String[] args) {
 		
 		SavingsAccount account = new SavingsAccount();
@@ -84,7 +84,7 @@ New balance: 10400.0
 Benefits: Standard Savings Account, With Insurance
 ```
 
-Description of the following methods
+Description of the following methods:
 
 1. **showAccountType()** - Either returns "Savings Account", "GSave" or "UpSave"
 2. **getInterestRate()** - Either returns 1% for Savings Account; 2.5% for GSave; 4.0% UpSave
@@ -97,10 +97,10 @@ Description of the following methods
 
 **BankAcountDecorator** must be an interface.
 
-Follow instructions.  You are not allowed to insert other methods except what is stated in the diagram (setters and getters are allowed).
+Follow instructions. You are not allowed to insert other methods except what is stated in the diagram (setters and getters are allowed).
 
 
 In your solution you must provide the following in your Github link account:
-   * Problem statement (description of the problem. Just copy what is stated here).
+   * Problem statement (Description of the problem. Just copy what is stated here).
    * UML Class Diagram
    * Uploaded java codes for the solution.
