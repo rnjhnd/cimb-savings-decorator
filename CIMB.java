@@ -14,7 +14,6 @@ public class CIMB {
 		System.out.println("Benefits: " + account.showBenefits());
 		
 		System.out.println("-------------------------------------------------------------");
-		System.out.println("-------------------------------------------------------------");
 		
 		GSave gSave = new GSave(account);
 		System.out.println(gSave.showInfo());
