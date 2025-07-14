@@ -16,7 +16,6 @@ Develop a decorator pattern approach that will implement the given UML diagram:
 
 ![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
 
-
 The content of your CIMB.java should ONLY contain the following codes with the exception of inserting your own package name :
 
 ```
@@ -98,10 +97,3 @@ Description of the following methods:
 **BankAcountDecorator** must be an interface.
 
 Follow instructions. You are not allowed to insert other methods except what is stated in the diagram (setters and getters are allowed).
-
-
-In your solution you must provide the following in your Github link account:
-
-   * Problem statement (Description of the problem. Just copy what is stated here).
-   * UML Class Diagram
-   * Uploaded java codes for the solution.
