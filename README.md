@@ -11,7 +11,6 @@ Benefits include the "Standard Savings Account" plus access to "GCash transfer".
 The UpSave account offers the highest interest rate of 4.0%.
 Benefits include the "Standard Savings Account" plus "with Insurance".
 
-
 Develop a decorator pattern approach that will implement the given UML diagram:
 
 ![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
