@@ -24,8 +24,7 @@ This project implements the Decorator Design Pattern with the following componen
 - **Extensibility**: Easy to add new account variants
 
 ## 📊 UML Class Diagram
-
-![UML Class Diagram](UML Class Diagram.png)
+<img width="1293" height="807" alt="UML Class Diagram" src="https://github.com/user-attachments/assets/32fef137-db4b-4663-bec2-0717a7206416" />
 
 The diagram illustrates:
 - The `BankAccount` component interface
@@ -215,7 +214,7 @@ Contributions are welcome! You can:
 
 ## 📄 License
 
-Add a `LICENSE` file to specify your chosen license (e.g., MIT).
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
