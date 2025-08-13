@@ -1,60 +1,132 @@
-# CIMB Digital Banking: Savings Account Enhancement
+# CIMB Savings Decorator
 
-CIMB is a digital bank that offers GSave and UpSave savings accounts. As with a typical Savings Account, it contains accountNumber, accountName, and a balance for that account.
+A Java implementation of the Decorator Design Pattern for flexible savings account features. This project demonstrates how to extend a base `SavingsAccount` with additional capabilities (e.g., higher interest, extra benefits) by wrapping it with decorators (`GSave`, `UpSave`).
 
-The typical savings account offers an interest rate of 1%.
-The benefits of the typical savings account is the same with the "Standard Savings Account" as compared to other banks.
+## 📋 Overview
 
-The GSave account offers an interest rate of 2.5%.
-Benefits include the "Standard Savings Account" plus access to "GCash transfer".
+Decorate a base savings account without modifying its code. Apply `GSave` or `UpSave` to alter the account type, interest rate, and benefits while preserving the original account state and behavior via composition.
 
-The UpSave account offers the highest interest rate of 4.0%.
-Benefits include the "Standard Savings Account" plus "with Insurance".
+## 🏗️ Architecture
 
-Develop a decorator pattern approach that will implement the given UML diagram:
+This project implements the Decorator Design Pattern with the following components:
 
-![image](https://github.com/user-attachments/assets/babf222c-7188-4572-9ac4-994941eba2ad)
+- **BankAccount interface**: Defines the contract shared by the base and all decorators
+- **SavingsAccount (Concrete Component)**: Base implementation
+- **BankAccountDecorator interface**: Decorator type that extends `BankAccount`
+- **GSave / UpSave (Concrete Decorators)**: Wrap a `BankAccount` and augment behavior
+- **CIMB (Main Application)**: Demonstrates the decorators in action
 
-The content of your CIMB.java should ONLY contain the following codes with the exception of inserting your own package name :
+### Design Pattern Benefits
+
+- **Open/Closed**: Extend behavior via new decorators without changing existing code
+- **Composition over inheritance**: Combine features at runtime
+- **Single Responsibility**: Keep the base class simple; put extras in decorators
+- **Extensibility**: Easy to add new account variants
+
+## 📊 UML Class Diagram
+
+![UML Class Diagram](UML Class Diagram.png)
+
+The diagram illustrates:
+- The `BankAccount` component interface
+- `SavingsAccount` as the concrete component
+- `BankAccountDecorator` as the decorator interface
+- Concrete decorators: `GSave`, `UpSave`
+- How each decorator wraps a `BankAccount` and overrides select behavior
+
+## 🚀 Features
+
+- **Multiple account types**: Savings Account, GSave, UpSave
+- **Decorator-based extensions**: Add benefits and adjust interest by wrapping
+- **Type-safe interface**: Unified `BankAccount` API across all implementations
+- **Clean architecture**: Small, focused classes following SOLID principles
+
+## 📁 Project Structure
 
 ```
+cimb-savings-decorator/
+├── src/
+│   ├── BankAccount.java               # Component interface
+│   ├── BankAccountDecorator.java      # Decorator interface (extends BankAccount)
+│   ├── SavingsAccount.java            # Concrete component (base account)
+│   ├── GSave.java                     # Concrete decorator (GCash transfer, 2.5%)
+│   ├── UpSave.java                    # Concrete decorator (with insurance, 4.0%)
+│   └── CIMB.java                      # Main application demo
+└── README.md						   # Project documentation
+```
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+
+- Java Development Kit (JDK) 8 or higher
+- Any Java IDE (IntelliJ IDEA, Eclipse, VS Code) or a terminal with `javac`/`java`
+
+### Getting Started
+
+1. Clone or download the project
+2. Open a terminal in the project root directory
+3. Compile the sources, outputting classes to `out/`:
+   - Windows (PowerShell):
+     ```powershell
+     javac -d out src/*.java
+     ```
+   - macOS/Linux (bash):
+     ```bash
+     javac -d out src/*.java
+     ```
+4. Run the demo application:
+   - Windows (PowerShell):
+     ```powershell
+     java -cp out DecoratorPattern.CIMB
+     ```
+   - macOS/Linux (bash):
+     ```bash
+     java -cp out DecoratorPattern.CIMB
+     ```
+
+## 📖 Usage
+
+Basic usage is demonstrated in `src/CIMB.java`:
+
+```java
+package DecoratorPattern;
+
 public class CIMB {
-	public static void main(String[] args) {
-		
-		SavingsAccount account = new SavingsAccount();
-		
-		account.setAccountNumber(1234);
-		account.setAccountName("Juan Dela Cruz");
-		account.setBalance(10000.0);
-		
-		System.out.println(account.showInfo());
-		System.out.println("Account type: " + account.showAccountType());
-		System.out.println("Interest rate: " + account.getInterestRate());
-		System.out.println("New balance: " + account.computeBalanceWithInterest());
-		System.out.println("Benefits: " + account.showBenefits());
-		
-		System.out.println("-------------------------------------------------------------");
-		
-		GSave gSave = new GSave(account);
-		System.out.println(gSave.showInfo());
-		System.out.println("Account type: " + gSave.showAccountType());
-		System.out.println("Interest rate: " + gSave.getInterestRate());
-		System.out.println("New balance: " + gSave.computeBalanceWithInterest());
-		System.out.println("Benefits: " + gSave.showBenefits());
-		
-		System.out.println("-------------------------------------------------------------");
-		
-		UpSave upSave = new UpSave(account);
-		System.out.println(upSave.showInfo());
-		System.out.println("Account type: " + upSave.showAccountType());
-		System.out.println("Interest rate: " + upSave.getInterestRate());
-		System.out.println("New balance: " + upSave.computeBalanceWithInterest());
-		System.out.println("Benefits: " + upSave.showBenefits());
-	}
- }
+    public static void main(String[] args) {
+        SavingsAccount account = new SavingsAccount();
+        account.setAccountNumber(1234);
+        account.setAccountName("Juan Dela Cruz");
+        account.setBalance(10000.0);
+
+        System.out.println(account.showInfo());
+        System.out.println("Account type: " + account.showAccountType());
+        System.out.println("Interest rate: " + account.getInterestRate());
+        System.out.println("New balance: " + account.computeBalanceWithInterest());
+        System.out.println("Benefits: " + account.showBenefits());
+
+        System.out.println("-------------------------------------------------------------");
+
+        GSave gSave = new GSave(account);
+        System.out.println(gSave.showInfo());
+        System.out.println("Account type: " + gSave.showAccountType());
+        System.out.println("Interest rate: " + gSave.getInterestRate());
+        System.out.println("New balance: " + gSave.computeBalanceWithInterest());
+        System.out.println("Benefits: " + gSave.showBenefits());
+
+        System.out.println("-------------------------------------------------------------");
+
+        UpSave upSave = new UpSave(account);
+        System.out.println(upSave.showInfo());
+        System.out.println("Account type: " + upSave.showAccountType());
+        System.out.println("Interest rate: " + upSave.getInterestRate());
+        System.out.println("New balance: " + upSave.computeBalanceWithInterest());
+        System.out.println("Benefits: " + upSave.showBenefits());
+    }
+}
 ```
 
-You should display the following output:
+### Expected Output
 
 ```
 Account number: 1234
@@ -82,17 +154,69 @@ New balance: 10400.0
 Benefits: Standard Savings Account, With Insurance
 ```
 
-Description of the following methods:
+## 🔧 Extending the Project
 
-1. **showAccountType()** - Either returns "Savings Account", "GSave" or "UpSave"
-2. **getInterestRate()** - Either returns 1% for Savings Account; 2.5% for GSave; 4.0% UpSave
-3. **getBalance()** - Returns the balance of the account set.
-4. **showBenefits()** - Either returns "Standard Savings Account" for Savings Account;
-		        benefits offered by savings account + "GSave Transfer";
-                        benefits offered by savings account + "With Insurance";
-5. **computeBalanceWithInterest()** - returns new balance by computing the balance plus the interest depending on the interest rate.
-6. **showInfo()** - Returns details of account number, account name, and balance.
+### Adding a New Decorator (e.g., `ProSave`)
 
-**BankAcountDecorator** must be an interface.
+1. Create a class that implements `BankAccountDecorator` and wraps a `BankAccount`.
+2. Override the necessary methods to change the account type, interest, and benefits.
+3. Use your decorator by wrapping an existing `BankAccount` instance.
 
-Follow instructions. You are not allowed to insert other methods except what is stated in the diagram (setters and getters are allowed).
+Example skeleton:
+
+```java
+package DecoratorPattern;
+
+public class ProSave implements BankAccountDecorator {
+    private final BankAccount bankAccount;
+
+    public ProSave(BankAccount bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    @Override
+    public String showAccountType() { return "ProSave"; }
+
+    @Override
+    public double getInterestRate() { return 0.03; }
+
+    @Override
+    public double getBalance() { return bankAccount.getBalance(); }
+
+    @Override
+    public String showBenefits() { return bankAccount.showBenefits() + ", Priority Support"; }
+
+    @Override
+    public double computeBalanceWithInterest() {
+        return bankAccount.getBalance() + bankAccount.getBalance() * getInterestRate();
+    }
+
+    @Override
+    public String showInfo() { return bankAccount.showInfo(); }
+
+    @Override
+    public void setBankAccount() { /* optional */ }
+}
+```
+
+## 🎯 Design Patterns Used
+
+### Decorator Pattern
+- **Purpose**: Add responsibilities to objects dynamically without changing their class
+- **Benefits**: Extends behavior transparently; promotes composition over inheritance
+- **Implementation**: Decorators implement `BankAccount` and hold a reference to another `BankAccount` instance, delegating and augmenting behavior
+
+## 🤝 Contributing
+
+Contributions are welcome! You can:
+- Add new decorators (account variants)
+- Improve documentation
+- Add tests or examples
+
+## 📄 License
+
+Add a `LICENSE` file to specify your chosen license (e.g., MIT).
+
+---
+
+**Note**: This implementation demonstrates clean code principles and design patterns best practices. The Decorator pattern is particularly useful when you want to add responsibilities to objects dynamically without changing their class, when you need to combine multiple behaviors at runtime, or when you want to avoid creating a large number of subclasses for every possible combination of features.
