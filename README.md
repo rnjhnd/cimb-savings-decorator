@@ -1,4 +1,4 @@
-# CIMB Savings Decorator
+# CIMB Digital Banking: Savings Account Enhancement
 
 A Java implementation of the **Decorator Design Pattern** for flexible savings account features. This project demonstrates how to extend a base `SavingsAccount` with additional capabilities (e.g., higher interest, extra benefits) by wrapping it with decorators (`GSave`, `UpSave`).
 
